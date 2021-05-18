@@ -76,6 +76,7 @@
 \RequirePackage{colortbl}
 \RequirePackage{threeparttable}
 \RequirePackage{array}
+\RequirePackage{zhnumber}
 
 \setlength{\headheight}{22pt}
 \setlength{\footskip}{1.3cm}
@@ -134,15 +135,15 @@
 
 
 \xpatchcmd{\frontmatter}{\pagenumbering{roman}}{\pagenumbering{Roman}}{}{}
-\renewcommand*{\thechapter}{第 \arabic{chapter} 章}
+\renewcommand*{\thechapter}{第\zhnum{chapter}章}
 \renewcommand*{\thesection}{\arabic{chapter}.\arabic{section}}
 \renewcommand*{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand*{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 
 \RequirePackage{chngcntr}
 \xpatchcmd{\c@t@sin}{\@nameuse{the#2}.}{\arabic{#2}-}{}{}
-\counterwithin{figure}{chapter}
-\counterwithin{table}{chapter}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
 
 \titleformat{\chapter}[block]{\linespread{1}\heiti\sanhao\bfseries\filcenter}{\thechapter}{1em}{}{}
 \titlespacing{\chapter}{0em}{0pt}{18pt}

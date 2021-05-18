@@ -50,4 +50,46 @@
     \include{data/agreement}
     \cleardoublepage
   }
+  
+  {
+    \frontmatter
+
+    \pagestyle{frontmatter}
+    \makeatletter
+      \let\ps@plain\ps@frontmatter
+    \makeatother
+
+    \include{data/abstract-zh}
+
+    \tableofcontents
+
+    \newpage
+    \thispagestyle{empty}
+  }
+
+  {
+    \mainmatter
+
+    \pagestyle{mainmatter}
+    \makeatletter
+      \let\ps@plain\ps@mainmatter
+    \makeatother
+
+    \include{data/chapter-1}
+    \cleardoublepage
+    \include{data/chapter-2}
+    \cleardoublepage
+    \include{data/chapter-3}
+    \cleardoublepage
+    \include{data/chapter-4}
+    \cleardoublepage
+
+    \renewcommand{\thechapter}{}
+    \include{data/bibliography}
+    \cleardoublepage
+
+    \include{data/acknowledgment}
+    \cleardoublepage
+  }
+
 \end{document}
