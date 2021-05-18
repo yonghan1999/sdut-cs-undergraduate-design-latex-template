@@ -1,5 +1,5 @@
-#  SDUT CS Undergraduate Design Latex Template
-> 山东理工大学计算机科学与技术专业本科论文Latex模版
+#  SDUT CS Undergraduate Design LaTeX Template
+> 山东理工大学计算机科学与技术专业本科论文LaTeX模版
 
 ## 关于
 
